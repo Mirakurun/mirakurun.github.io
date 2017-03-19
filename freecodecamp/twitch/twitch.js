@@ -1,10 +1,10 @@
 function getChannels() {
     var arrChannels = ["dansgaming", "twitchpresents"];
     var strChannels = arrChannels.join();
-    var url = "https://api.twitch.tv/kraken/streams?callback=?&client_id=o0azfla1ko5uwng0vr8mk40nj4xapx&channel=" + channels;
+    var url = "https://api.twitch.tv/kraken/streams?callback=?&client_id=o0azfla1ko5uwng0vr8mk40nj4xapx&channel=" + strChannels;
 
     $.ajax({
-        url: "https://api.twitch.tv/kraken/streams/dansgaming?client_id=o0azfla1ko5uwng0vr8mk40nj4xapx",
+        url: url,
         type: "GET",
     }).done(function(data){
         console.log(strChannels);
