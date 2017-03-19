@@ -1,5 +1,5 @@
 function getChannels() {
-    var arrChannels = ["dansgaming", "twitchpresents"];
+    var arrChannels = ["dansgaming"];
     var strChannels = arrChannels.join();
     var url = "https://api.twitch.tv/kraken/streams?channel=" + strChannels + "&callback=?&client_id=o0azfla1ko5uwng0vr8mk40nj4xapx";
 
