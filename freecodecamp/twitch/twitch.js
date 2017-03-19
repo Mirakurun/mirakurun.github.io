@@ -1,11 +1,11 @@
 function getChannels() {
-    var arrChannels = ["TwitchPresents", "maximilian_dood", "admiralbahroo", "dansgaming"];
-    var strChannels = arrChannels.join();
-    var url = "https://api.twitch.tv/kraken/streams?channel=" + arrChannels.join() + "&client_id=o0azfla1ko5uwng0vr8mk40nj4xapx";
+    var channels = ["TwitchPresents", "maximilian_dood", "admiralbahroo", "dansgaming"];
+    var url = "https://api.twitch.tv/kraken/streams?channel=" + channels.join() + "&client_id=o0azfla1ko5uwng0vr8mk40nj4xapx";
 
     $.ajax({
         url: url,
         type: "GET",
+        dataType: "json"
     }).done(function(data){
         console.log(url);
         console.log(data);
@@ -14,7 +14,6 @@ function getChannels() {
 }
 
 $(document).ready(function(){
-    console.log("hello world");
     getChannels();
 
 });
