@@ -7,7 +7,7 @@ function getChannels() {
         url: url,
         type: "GET",
     }).done(function(data){
-        console.log(strChannels);
+        console.log(url);
         console.log(data);
     });
 
