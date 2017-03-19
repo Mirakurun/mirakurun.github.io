@@ -6,12 +6,14 @@ function getChannels() {
         url: url,
         type: "GET",
     }).done(function(data){
+        console.log("hello world");
         console.log(data);
     });
 
 }
 
 $(document).ready(function(){
+    console.log("hello world");
     getChannels();
 
 });
