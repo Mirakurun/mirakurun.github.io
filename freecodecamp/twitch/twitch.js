@@ -16,10 +16,4 @@ function getChannels() {
 $(document).ready(function(){
     getChannels();
 
-    $("button").click(function(){
-        $("button").text("f");
-
-
-    });
-
 });
