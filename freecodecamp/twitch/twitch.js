@@ -16,7 +16,7 @@ function getChannels() {
 $(document).ready(function(){
     getChannels();
 
-    $("button li a:selected").click(function(){
+    $("button").click(function(){
         $("button").text("f");
 
 
