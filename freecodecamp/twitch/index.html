@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Twitch Live App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="twitch.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -10,23 +12,19 @@
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">Twitch Live App</h1>
-                    <div class="col-md-offset-10 col-md-2">
-                        <select class="form-control">
-                            <option>All</option>
-                            <option>Online</option>
-                            <option>Offline</option>
-                        </select>
-                    </div>
-                    <select class="form-control pull-right col-md-2">
+            <div class="row form-inline">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h1 class="text-center">Twitch Live App
+                    <select class="form-control">
                         <option>All</option>
                         <option>Online</option>
                         <option>Offline</option>
                     </select>
+                    </h1>
                 </div>
             </div>
+        </div><!--/.container-->
+        <div id="streams">
         </div>
     </body>
 </html>
