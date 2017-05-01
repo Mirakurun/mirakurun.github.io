@@ -1,5 +1,5 @@
 function getData() {
-    var channels = ["twitchpresents", "dansgaming", "admiralbahroo", "maximilian_dood", "annemunition", "followgrubby", "pokimane", "tvique", "teamsp00ky", "bobross", "chu8", "summit1g", "freecodecamp"];
+    var channels = ["twitchpresents", "dansgaming", "admiralbahroo", "maximilian_dood", "itmejp", "annemunition", "followgrubby", "pokimane", "iddqdow", "tvique", "teamsp00ky", "bobross", "chu8", "summit1g", "freecodecamp"];
 
     channels.forEach(function (val) {
         var url = "https://api.twitch.tv/kraken/channels/" + val + "?client_id=o0azfla1ko5uwng0vr8mk40nj4xapx",
