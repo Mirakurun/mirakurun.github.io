@@ -1,0 +1,7 @@
+#circle {
+    border: 1px solid black;
+    border-radius: 400px;
+    height: 400px;
+    width: 400px;
+    margin: 20% auto 0 auto;
+}
