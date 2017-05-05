@@ -13,7 +13,6 @@ $(document).ready(function () {
         $("#s").text("00");
         s = Number($("#s").text());
     });
-
     $("#circle").click(function () {
         if (!runTimer) {
             runTimer = true;
