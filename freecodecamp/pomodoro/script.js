@@ -3,10 +3,11 @@ $(document).ready(function () {
 
     var runTimer = false,
         countdown,
+        timeoutId = 0,
         s = Number($("#s").text()),
         m = Number($("#m").text());
 
-    $("#min-input").on("input", function(){
+    $("#min-input").on("input", function () {
         $("#m").text($("#min-input").val());
         m = Number($("#m").text());
         $("#s").text("00");
@@ -44,14 +45,22 @@ $(document).ready(function () {
             console.log(runTimer);
         }
     });
-    $("#minus").click(function(){
-        m--;
-        $("#m").text(m);
-        $("#min-input").val(m);
+    $("#minus").on("mousedown", function () {
+        timeoutId = setInterval(function () {
+            m--;
+            $("#m").text(m);
+            $("#min-input").val(m);
+        }, 200);
+    }).on("mouseup mouseleave", function(){
+        clearInterval(timeoutId);
     });
-    $("#plus").click(function(){
-        m++;
-        $("#m").text(m);
-        $("#min-input").val(m);
+    $("#plus").on("mousedown", function () {
+        timeoutId = setInterval(function () {
+            m++;
+            $("#m").text(m);
+            $("#min-input").val(m);
+        }, 200);
+    }).on("mouseup mouseleave", function(){
+        clearInterval(timeoutId);
     });
 });
