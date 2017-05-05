@@ -12,6 +12,7 @@
 
 #min-input {
     font-size: 2em;
+    max-width: 100px;
 }
 
 #timer {
