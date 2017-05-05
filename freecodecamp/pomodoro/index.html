@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,14 +14,39 @@
 
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <form id="min-form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="min">Minutes</label>
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                <button id="minus" class="btn btn-default" type="button">&minus;</button>
+                                </span>
+                                <input id="min-input" type="text" class="form-control text-center" maxlength="2" value="25">
+                                <span class="input-group-btn">
+                                <button id="plus" class="btn btn-default" type="button">+</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div id="circle">
+            <div id="timer" class="text-center">
+                <span id="m"></span><span>:</span><span id="s">00</span>
+            </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

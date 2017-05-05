@@ -3,5 +3,20 @@
     border-radius: 400px;
     height: 400px;
     width: 400px;
-    margin: 20% auto 0 auto;
+    margin: 0 auto 0 auto;
+}
+
+#min-form {
+    margin-top: 50%;
+}
+
+#min-input {
+    font-size: 2.5em;
+}
+
+#timer {
+    height: 400px;
+    width: 400px;
+    line-height: 400px;
+    font-size: 5em;
 }
