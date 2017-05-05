@@ -45,21 +45,33 @@ $(document).ready(function () {
         }
     });
     $("#minus").on("mousedown", function () {
-        timeoutId = setInterval(function () {
-            m--;
-            $("#m").text(m);
-            $("#min-input").val(m);
+        id = setInterval(function () {
+            if (m > 0) {
+                m--;
+                $("#m").text(("0" + m).slice(-2));
+                $("#min-input").val(m);
+            }
         }, 200);
-    }).on("mouseup mouseleave", function(){
-        clearInterval(timeoutId);
+    }).on("mouseup mouseleave", function () {
+        clearInterval(id);
+    }).click(function () {
+        if (m > 0) {
+            m--;
+            $("#m").text(("0" + m).slice(-2));
+            $("#min-input").val(m);
+        }
     });
     $("#plus").on("mousedown", function () {
-        timeoutId = setInterval(function () {
+        id = setInterval(function () {
             m++;
-            $("#m").text(m);
+            $("#m").text(("0" + m).slice(-2));
             $("#min-input").val(m);
         }, 200);
-    }).on("mouseup mouseleave", function(){
-        clearInterval(timeoutId);
+    }).on("mouseup mouseleave", function () {
+        clearInterval(id);
+    }).click(function () {
+        m++;
+        $("#m").text(("0" + m).slice(-2));
+        $("#min-input").val(m);
     });
 });
