@@ -1,0 +1,21 @@
+#board {
+    max-width: 220px;
+    margin: 25% auto 0 auto;
+}
+.box {
+    height: 72px;
+    width: 72px;
+    float: left;
+    border-style: solid;
+    border-color: black;
+}
+
+.top-left {border-width: 0 1px 1px 0;}
+.top-center {border-width: 0 1px 1px 1px;}
+.top-right {border-width: 0 0 1px 1px;}
+.mid-left {border-width: 1px 1px 1px 0;}
+.mid-center {border-width: 1px 1px 1px 1px;}
+.mid-right {border-width: 1px 0 1px 1px;}
+.bot-left {border-width: 1px 1px 0 0;}
+.bot-center {border-width: 1px 1px 0 1px;}
+.bot-right {border-width: 1px 0 0 1px;}

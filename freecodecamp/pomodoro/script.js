@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     var runTimer = false,
         countdown,
-        timeoutId = 0,
+        id = 0,
         s = Number($("#s").text()),
         m = Number($("#m").text());
 
@@ -12,6 +12,10 @@ $(document).ready(function () {
         m = Number($("#m").text());
         $("#s").text("00");
         s = Number($("#s").text());
+    }).keypress(function(e){
+        if (e.which === 13) {
+            e.preventDefault();
+        }
     });
     $("#circle").click(function () {
         if (!runTimer) {

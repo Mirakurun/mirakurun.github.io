@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="msg"></div>
+    <div class="container">
+        <div id="board">
+            <div>
+                <div id="7" class="top-left text-center box"></div>
+                <div id="8" class="top-center text-center box"></div>
+                <div id="9" class="top-right text-center box"></div>
+            </div>
+            <div>
+                <div id="4" class="mid-left text-center box"></div>
+                <div id="5" class="mid-center text-center box"></div>
+                <div id="6" class="mid-right text-center box"></div>
+            </div>
+            <div>
+                <div id="1" class="bot-left text-center box"></div>
+                <div id="2" class="bot-center text-center box"></div>
+                <div id="3" class="bot-right text-center box"></div>
+            </div>
+        </div>
+    </div>
+    <!--/.container-->
+
+    <!--Modal-->
+    <div id="select-modal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Would you like to be <i class="fa fa-times" aria-hidden="true"></i> or <i class="fa fa-circle-o" aria-hidden="true"></i>?</h3>
+                </div>
+                <div class="modal-body text-center">
+                    <button id="x" type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-lg fa-times" aria-hidden="true"></i></button>
+                    <button id="o" type="button" class="btn btn-default btn-lg" data-dismiss="modal"><i class="fa fa-lg fa-circle-o" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <!--/.modal-content-->
+        </div>
+        <!--/.modal-dialog-->
+    </div>
+    <!--/.modal-->
+
+    <div id="restart-modal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div id="restart-msg" class="modal-body text-center"></div>
+                <div class="modal-footer">
+                    <button id="restart" type="button" class="btn btn-primary" data-dismiss="modal">Restart</button>
+                </div>
+            </div>
+            <!--/.modal-content-->
+        </div>
+        <!--/.modal-dialog-->
+    </div>
+    <!--/.modal-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
