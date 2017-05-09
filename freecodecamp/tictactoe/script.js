@@ -4,17 +4,17 @@ var user,
     moves = [],
     userMoves = [],
     computerMoves = [],
-    gameover = false,
-    winner = [
-        ["1", "2", "3"],
-        ["4", "5", "6"],
-        ["7", "8", "9"],
-        ["7", "4", "1"],
-        ["8", "5", "2"],
-        ["9", "6", "3"],
-        ["7", "5", "3"],
-        ["9", "5", "1"]
-    ],
+    gameover = false;
+winner = [
+    ["1", "2", "3"],
+    ["4", "5", "6"],
+    ["7", "8", "9"],
+    ["7", "4", "1"],
+    ["8", "5", "2"],
+    ["9", "6", "3"],
+    ["7", "5", "3"],
+    ["9", "5", "1"]
+],
     x = "<i class='fa fa-5x fa-times' aria-hidden='true'></i>",
     o = "<i class='fa fa-5x fa-circle-o' aria-hidden='true'></i>";
 
@@ -40,50 +40,80 @@ function computerMove() {
     var computerMove;
 
     currentPlayer = computer;
-
     $("#msg").text("Computer's move");
+    computerMove = (Math.floor((Math.random() * 9) + 1)).toString();
 
-    do {
+    while (moves.indexOf(computerMove) !== -1) {
         computerMove = (Math.floor((Math.random() * 9) + 1)).toString();
-        console.log("computer's move: " + computerMove);
-    } while (moves.indexOf(computerMove) !== -1 && !gameover);
+    }
 
-    if (moves.indexOf(computerMove) === -1 && !gameover) {
+    console.log("computer's move: " + computerMove);
+
+    if (moves.indexOf(computerMove) === -1) {
         setTimeout(function () {
             $("#" + computerMove).html(computer);
             moves.push(computerMove);
             computerMoves.push(computerMove);
             checkWinner();
-            if (!gameover) {
-                userMove();
-            }
-            console.log(moves);
+            //if (!gameover) {
+            //userMove();
+            //}
             console.log("computer picks: " + computerMoves);
+            console.log(moves);
         }, 2000);
     }
 }
 
 function checkWinner() {
-    winner.forEach(function (arr) {
-        if (arr.every(function (val) {
+    if (winner.some(function (arr) {
+        return arr.every(function (val) {
             return userMoves.indexOf(val) !== -1;
-        })) {
-            $("#restart-msg").text("You win!");
-            $("#restart-modal").modal("show");
-            gameover = true;
-        } else if (arr.every(function (val) {
+        })
+    })) {
+        $("#restart-msg").text("You win!");
+        $("#restart-modal").modal("show");
+    } else if (winner.some(function (arr) {
+        return arr.every(function (val) {
             return computerMoves.indexOf(val) !== -1;
-        })) {
-            $("#restart-msg").text("Computer wins!");
-            $("#restart-modal").modal("show");
-            gameover = true;
-        }
-    });
-    if (moves.length === 9) {
+        })
+    })) {
+        $("#restart-msg").text("Computer wins!");
+        $("#restart-modal").modal("show");
+    } else if (moves.length === 9) {
         $("#restart-msg").text("Draw!");
         $("#restart-modal").modal("show");
-        gameover = true;
-    } 
+    } else {
+        if (currentPlayer === user) {
+            computerMove();
+        } else if (currentPlayer === computer) {
+            userMove();
+        }
+    }
+
+    /*
+        winner.forEach(function (arr) {
+            if (arr.every(function (val) {
+                return userMoves.indexOf(val) !== -1;
+            })) {
+                $("#restart-msg").text("You win!");
+                $("#restart-modal").modal("show");
+                return true;
+            } else if (arr.every(function (val) {
+                return computerMoves.indexOf(val) !== -1;
+            })) {
+                $("#restart-msg").text("Computer wins!");
+                $("#restart-modal").modal("show");
+                return true;
+            }
+        });
+        if (moves.length === 9 && $("#restart-msg").text() === "") {
+            $("#restart-msg").text("Draw!");
+            $("#restart-modal").modal("show");
+            return true;
+        }
+    
+        return false;
+        */
 }
 
 function restart() {
@@ -92,8 +122,7 @@ function restart() {
         currentPlayer = "",
         moves = [],
         userMoves = [],
-        computerMoves = [],
-        gameover = false;
+        computerMoves = [];
 
     $(".box").html("");
     $("#msg").text("");
@@ -129,12 +158,12 @@ $(document).ready(function () {
             $(this).html(user);
             moves.push($(this).attr("id"));
             userMoves.push($(this).attr("id"));
-            checkWinner();
-            if (!gameover) {
-                computerMove();
-            }
             console.log(moves);
             console.log("user picks:" + userMoves);
+            checkWinner();
+            //if (!gameover) {
+            //computerMove();
+            //}
         }
     });
 
