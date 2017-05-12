@@ -12,7 +12,7 @@ $(document).ready(function () {
         m = Number($("#m").text());
         $("#s").text("00");
         s = Number($("#s").text());
-    }).keypress(function(e){
+    }).keypress(function (e) {
         if (e.which === 13) {
             e.preventDefault();
         }
@@ -67,15 +67,19 @@ $(document).ready(function () {
     });
     $("#plus").on("mousedown", function () {
         id = setInterval(function () {
-            m++;
-            $("#m").text(("0" + m).slice(-2));
-            $("#min-input").val(m);
+            if (m < 99) {
+                m++;
+                $("#m").text(("0" + m).slice(-2));
+                $("#min-input").val(m);
+            }
         }, 200);
     }).on("mouseup mouseleave", function () {
         clearInterval(id);
     }).click(function () {
-        m++;
-        $("#m").text(("0" + m).slice(-2));
-        $("#min-input").val(m);
+        if (m < 99) {
+            m++;
+            $("#m").text(("0" + m).slice(-2));
+            $("#min-input").val(m);
+        }
     });
 });
