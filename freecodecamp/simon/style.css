@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|VT323');
+
+#outter-circle {
+    background-color: #4d4d4d;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    margin: 10% auto 0 auto;
+    position: relative;
+}
+
+#inner-circle {
+    background-color: #4d4d4d;
+    height: 240px;
+    width: 240px;
+    border-radius: 100%;
+    position: absolute;
+    left: 130px;
+    top: 130px;
+}
+
+#logo {
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3.2em;
+    margin-top: 50px;
+}
+
+#trademark {
+    font-size: 0.3em;
+}
+
+#counter {
+    height: 35px;
+    width: 35px;
+    top: 120px;
+    left: 45px;
+    color: white;
+    font-size: 1.7em;
+    font-family: 'VT323', monospace;
+    padding: 0px;
+    position: absolute;
+    border-top: 2px solid black;
+    border-radius: 4px;
+    background: -webkit-linear-gradient(right bottom, black, #666666);
+    background: -moz-linear-gradient(top left, black, #666666);
+    background: linear-gradient(to top left, black, #666666);
+}
+
+#reset-btn {
+    height: 35px;
+    width: 35px;
+    background-color: #00cc00;
+    border: none;
+    top: 120px;
+    left: 103px;
+    position: absolute;
+    border-radius: 35px;
+    box-shadow: 0 4px 5px 0 black;
+}
+
+#strict-btn {
+    height: 35px;
+    width: 35px;
+    background-color: #cccc00;
+    border: none;
+    top: 120px;
+    left: 161px;
+    position: absolute;
+    border-radius: 35px;
+    box-shadow: 0 4px 5px 0 black;
+}
+
+#led {
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    top: 110px;
+    left: 190px;
+    border-radius: 4px;
+    position: absolute;
+}
+
+#count {
+    color: white;
+    top: 160px;
+    left: 37px;
+    position: absolute;
+}
+
+#reset {
+    color: white;
+    top: 160px;
+    left: 97px;
+    position: absolute;
+}
+
+#strict {
+    color: white;
+    top: 160px;
+    left: 154px;
+    position: absolute;
+}
+
+#top-border {
+    background-color: #4d4d4d;
+    height: 110px;
+    width: 20px;
+    position: absolute;
+    left: 240px;
+    top: 20px;
+}
+
+#right-border {
+    background-color: #4d4d4d;
+    height: 20px;
+    width: 110px;
+    position: absolute;
+    right: 20px;
+    top: 240px;
+}
+
+#bottom-border {
+    background-color: #4d4d4d;
+    height: 110px;
+    width: 20px;
+    position: absolute;
+    left: 240px;
+    bottom: 20px;
+}
+
+#left-border {
+    background-color: #4d4d4d;
+    height: 20px;
+    width: 110px;
+    position: absolute;
+    left: 20px;
+    top: 240px;
+}
+
+.green-btn {
+    float: left;
+    background-color: #00cc00;
+    height: 230px;
+    width: 230px;
+    border: none;
+    border-top-left-radius: 100%;
+    background: radial-gradient(circle at 100% 100%, rgba(255,255,255,0) 120px, #00cc00 121px);
+    margin: 20px 0 0 20px;
+    filter: brightness(100%);
+    outline: none;
+}
+
+.red-btn {
+    float: left;
+    background-color: #cc0000;
+    height: 230px;
+    width: 230px;
+    border: none;
+    border-top-right-radius: 100%;
+    background: radial-gradient(circle at 0 100%, rgba(255,255,255,0) 120px, #cc0000 121px);
+    margin: 20px 20px 0 0;
+    filter: brightness(100%);
+    outline: none;
+}
+
+.yellow-btn {
+    float: left;
+    background-color: #cccc00;
+    height: 230px;
+    width: 230px;
+    border: none;
+    border-bottom-left-radius: 100%;
+    background: radial-gradient(circle at 100% 0, rgba(255,255,255,0) 120px, #cccc00 121px);
+    margin: 0 0 20px 20px;
+    outline: none;
+}
+
+.blue-btn {
+    float: left;
+    background-color: #0000cc;
+    height: 230px;
+    width: 230px;
+    border: none;
+    border-bottom-right-radius: 100%;
+    background: radial-gradient(circle at 0 0, rgba(255,255,255,0) 120px, #0000cc 121px);
+    margin: 0 20px 20px 0;
+    outline: none;
+}
