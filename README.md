@@ -9,4 +9,4 @@
 
 ## Udemy
 
-<li><a href="https://mirakurun.github.io/udemy/monster-slayer/">JavaScript Calculator</a></li>
+<li><a href="https://mirakurun.github.io/udemy/monster-slayer/">Monster Slayer</a></li>
